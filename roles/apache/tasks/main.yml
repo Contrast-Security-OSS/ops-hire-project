@@ -1,0 +1,17 @@
+---
+# tasks file for ansible-role-finv
+
+- name: Install apache via apt
+  apt: name={{ item }} update_cache=yes
+  sudo: true
+  with_items:
+     - apache2
+     - libapache2-mod-auth-mysql 
+     - php5-mysql
+     - libapache2-mod-php5
+
+- name: Set default apache config
+  template: src=000-default.conf.j2 dest=/etc/apache2/sites-enabled/000-default.conf
+  notify:
+     - restart apache2
+

@@ -1,0 +1,24 @@
+---
+# tasks file for finv-app
+
+- name: Remove  html directory
+  file: path=/var/www/html state=absent
+
+- name: Checkout the source code
+  git:
+    dest=/var/www/html
+    force=yes
+    repo=https://github.com/edlangley/inventory-webapp.git
+    update=yes
+
+- name: Create database
+  shell: mysql -u {{ database_user }} -p{{ database_password }} -h 192.168.50.5 --protocol=tcp -e "create database if not exists {{ database_name }}"
+
+- name: Load application schema
+  shell: mysql -u {{ database_user }} -p{{ database_password }} -h 192.168.50.5 --protocol=tcp {{ database_name }}  < /var/www/html/sql-db-sample/electronics.sql
+
+- name: Create database
+  shell: mysql -u {{ database_user }} -p{{ database_password }} -h 192.168.50.5 --protocol=tcp {{ database_name }} -e "INSERT INTO admin_users (user_name,password) VALUES ('admin','admin');"
+
+- name: Setup dbconfig
+  template: src=admin-auth.php.j2 dest=/var/www/html/php/admin-auth.php

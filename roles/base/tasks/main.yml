@@ -1,0 +1,9 @@
+---
+# tasks file for base
+
+- name: Install base packages
+  apt: name={{ item }} update_cache=yes
+  sudo: true
+  with_items:
+     - git	
+     - mysql-client

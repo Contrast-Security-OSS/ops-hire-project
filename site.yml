@@ -1,0 +1,19 @@
+
+- hosts: all
+  become: True
+  roles:
+    - { role: base, tags: ['base'] }
+
+- hosts: database
+  become: True
+  roles:
+    - { role: mysql, tags: ['mysql'] }
+
+- hosts: appserver
+  become: True
+  roles:
+    - { role: apache, tags: ['apache'] }
+    - { role: webapp, tags: ['webapp'] }
+
+
+

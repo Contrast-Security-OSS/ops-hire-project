@@ -1,0 +1,22 @@
+---
+# tasks file for mysql
+
+- name: Install MySQL server
+  apt: name={{ item }} update_cache=yes cache_valid_time=3600 state=present
+  sudo: yes
+  with_items:
+    - python-mysqldb
+    - mysql-server
+
+- name: Configure private bind address for database server
+  lineinfile: dest=/etc/mysql/my.cnf regexp='^bind-address' line='bind-address=192.168.50.5'
+
+- name: Restart MySQL
+  service: name=mysql state=restarted
+ 
+- name: Create database user
+  command: mysql -u root -e "{{ item }}"
+  with_items:
+     - "CREATE USER '{{ database_user}}'@'192.168.50.4' IDENTIFIED BY '{{ database_password }}';"
+     - "GRANT ALL PRIVILEGES ON *.* TO '{{ database_user }}'@'192.168.50.4';" 
+
