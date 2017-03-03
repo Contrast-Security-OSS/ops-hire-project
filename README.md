@@ -7,7 +7,7 @@ At Contrast we like to play hard, work hard, and automate our Saas environment e
 <a href="team.jpg" title="We love to have fun as a team.">
 <img width="250" height="170" src="team.jpg" alt="We love to have fun as a team."></a>
 <a href="jeff.jpg" title="Max and Jeff">
-<img width="250" height="125" src="jeff.jpg" alt="Max and Jeff"></a>
+<img width="300" height="170" src="jeff.jpg" alt="Max and Jeff"></a>
 <a href="hanson.jpg" title="Hanson does not work here.">
 <img width="250" height="170" src="hanson.jpg" alt="Hanson does not work here."></a>
 
