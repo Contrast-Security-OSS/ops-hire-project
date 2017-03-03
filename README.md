@@ -5,11 +5,11 @@
 At Contrast we like to play hard, work hard, and automate our Saas environment end to end. We made this project so you can showcase your skills and give us a better idea of your individual talents!
 
 <a href="team.jpg" title="We love to have fun as a team.">
-<img src="team.jpg" alt="We love to have fun as a team."></a>
+<img width="150" height="100" src="team.jpg" alt="We love to have fun as a team."></a>
 <a href="jeff.jpg" title="Max and Jeff">
-<img src="jeff.jpg" alt="Max and Jeff"></a>
+<img width="150" height="100" src="jeff.jpg" alt="Max and Jeff"></a>
 <a href="hanson.jpg" title="Hanson does not work here.">
-<img src="hanson.jpg" alt="Hanson does not work here."></a>
+<img width="150" height="100" src="hanson.jpg" alt="Hanson does not work here."></a>
 
 # Setup
 
