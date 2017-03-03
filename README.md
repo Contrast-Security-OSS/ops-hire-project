@@ -25,7 +25,7 @@ Inside the root folder of this project, there is Vagrant file along with ansible
 
 # The goal
 
-Make this project better by adding new features and improving our automation.
+Make this project better by adding new features and improving our automation. Fork this project from your github account!
 
 # Tasks
 
