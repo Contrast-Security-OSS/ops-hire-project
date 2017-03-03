@@ -21,7 +21,7 @@ Before we start, install these packages on your computer
 
 # Stack
 
-Inside the root folder of this project, there is Vagrant file along with ansible code that will build out an appserver and a MySQL database. After the provisioning finishes, you will have a web application running locally at http://192.168.50.4. Login credentials are admin/admin. 
+Inside the root folder of this project, there is Vagrant file along with ansible code that will build out an appserver and a MySQL database. Run "vagrant up" in this directory. After the provisioning finishes, you will have a web application running locally at http://192.168.50.4. Login credentials are admin/admin. 
 
 # The goal
 
