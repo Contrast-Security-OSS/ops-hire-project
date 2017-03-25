@@ -5,5 +5,5 @@
   apt: name={{ item }} update_cache=yes
   sudo: true
   with_items:
-     - git	
+     - git
      - mysql-client
