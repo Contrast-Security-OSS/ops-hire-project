@@ -3,7 +3,7 @@
 
 - name: Install base packages
   apt: name={{ item }} update_cache=yes
-  sudo: true
+  become_method: sudo
   with_items:
      - git
      - mysql-client
