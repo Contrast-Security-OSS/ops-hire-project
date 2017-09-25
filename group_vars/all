@@ -2,3 +2,4 @@ database_host: 192.168.50.5
 database_password: mysqlpass
 database_user: mysqluser
 database_name: electronics
+database_port: 2310
