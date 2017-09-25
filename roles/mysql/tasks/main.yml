@@ -9,7 +9,10 @@
     - mysql-server
 
 - name: Configure private bind address for database server
-  lineinfile: dest=/etc/mysql/my.cnf regexp='^bind-address' line='bind-address=192.168.50.5'
+  lineinfile: dest=/etc/mysql/my.cnf regexp='^bind-address' line='bind-address={{ database_host }}'
+
+- name: Configure port for database server
+  lineinfile: dest=/etc/mysql/my.cnf regexp='^port' line='port={{ database_port }}' backrefs=yes
 
 - name: Restart MySQL
   service: name=mysql state=restarted

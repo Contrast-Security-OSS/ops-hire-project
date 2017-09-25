@@ -18,7 +18,7 @@
                 }
                 else
                 {
-                        $conn = mysql_connect("{{ database_host }}", "{{ database_user}}", "{{ database_password }}") or die(mysql_error());
+                        $conn = mysql_connect("{{ database_host }}:{{ database_port }}", "{{ database_user}}", "{{ database_password }}") or die(mysql_error());
                 }
                 mysql_select_db("electronics", $conn) or die(mysql_error());
                 $sqlquery = "SELECT * FROM admin_users";
