@@ -1,5 +1,7 @@
 # Contrast Operations Hire Project
 
+**Please see [infrastructure-hire-project](https://github.com/Contrast-Security-OSS/infrastructure-hire-project) for the new operations hire project.**
+
 # Introduction
 
 At Contrast we like to play hard, work hard, and automate our Saas environment end to end. We made this project so you can showcase your skills and give us a better idea of your individual talents!
